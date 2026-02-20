@@ -1,0 +1,31 @@
+package javaoops;
+
+class Payment{
+	void topay(int amount) {
+		System.out.println("Payment via Netbanking:"+amount);
+	}
+}
+class Atm extends Payment{
+	void topay(int amount) {
+		System.out.println("Payment via ATM:"+amount);
+	}
+	
+}
+class upi extends Payment{
+	void topay(int amount) {
+		System.out.println("Payment via UPI:"+amount);
+	}
+	
+}
+public class Paymentprocessing {
+	public static void main(String[] args) {
+		Payment ac=new Payment();
+		ac.topay(50000);
+		Payment ref=new Atm();
+		ref.topay(30000);
+		Payment obj=new upi();
+		obj.topay(40000);
+		
+	}
+
+}
